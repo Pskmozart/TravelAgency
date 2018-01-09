@@ -1,0 +1,447 @@
+/**
+ * Home page general styles
+ */
+
+
+/*******************************************************************************
+/* GLOBALS */
+/******************************************************************************/
+
+/*fonts loading*/
+@font-face {
+    font-family: Cuprum;
+    src: url('../fonts/Cuprum/Cuprum-Regular.ttf');
+}
+
+@font-face {
+    font-family: Pacifico;
+    src: url('../fonts/Pacifico/Pacifico-Regular.ttf');
+}
+
+
+/*all elements*/
+*, ::after, ::before {
+    /*include border and padding in elements width and height*/
+    box-sizing: border-box;
+}
+
+
+/*general body properties*/
+body {
+    min-width: 225px;
+    color: #000000;
+    margin: 0;
+    
+    /*correct bugs of the css transitions causeing incorrect browser positioning of elements*/
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -ms-backface-visibility: hidden;
+    -o-backface-visibility: hidden;
+    backface-visibility: hidden
+}
+
+
+/*general img properties*/
+img {
+    /*fix for IE and MS Edge to avoid scaled images in img tags to get pixilated*/
+    -ms-interpolation-mode: bicubic;
+    image-rendering: auto
+}
+
+
+/*general headings properties*/
+h1, h2, h3, h4, h5, h6 {
+    line-height: 1.2;
+    margin: 0;
+}
+
+
+/*general anchor properties*/
+a {
+    text-decoration: none;
+    
+    /*transitions*/
+    -webkit-transition: all 0.15s ease-in-out; /* Chrome/Safari */
+    -moz-transition: all 0.15s ease-in-out; /* Firefox */
+    -ms-transition: all 0.15s ease-in-out; /* IE */
+    -o-transition: all 0.15s ease-in-out; /* Opera */
+    transition: all 0.15s ease-in-out
+}
+
+
+/*general anchor properties (ON HOVER)*/
+a:hover {
+    color: #f04b38
+}
+
+
+
+/******************************************************************************/
+/* ELEMENT SIZES CONSTRAINS */
+/******************************************************************************/
+
+/*constrain the size of any div in extra-large viewports and center horizontally*/
+.constrained-xl {
+    max-width: 1260px;
+    margin-left: auto;
+    margin-right: auto
+}
+
+
+
+/******************************************************************************/
+/* HEADER */
+/******************************************************************************/
+
+/*header wrapper*/
+#header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #eeeeee;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    z-index: 10; /*over everything*/
+    
+     /*transitions*/
+    -webkit-transition: all 0.2s ease-in-out; /* Chrome/Safari */
+    -moz-transition: all 0.2s ease-in-out; /* Firefox */
+    -ms-transition: all 0.2s ease-in-out; /* IE */
+    -o-transition: all 0.2s ease-in-out; /* Opera */
+    transition: all 0.2s ease-in-out
+}
+
+
+/*header shrunken mode*/
+#header.shrink {
+    animation: shrinkAnimation 0.5s /*apply color change animation when shrunken*/
+}
+
+
+/*header content container*/ 
+#header #headerContainer {
+    display: flex;
+    align-items: center;
+    padding: 10px
+}
+
+
+/*header logo*/
+#header #headerLogo {
+    width: auto;
+    height: 80px;
+    
+    /*transitions - for when the header is shrunken*/
+    -webkit-transition: all 0.2s ease-in-out; /* Chrome/Safari */
+    -moz-transition: all 0.2s ease-in-out; /* Firefox */
+    -ms-transition: all 0.2s ease-in-out; /* IE */
+    -o-transition: all 0.2s ease-in-out; /* Opera */
+    transition: all 0.2s ease-in-out
+}
+
+
+/*header logo - shrunken mode*/
+#header.shrink #headerLogo {
+    height: 50px
+}
+
+
+/*header title*/
+#header #headerTitle {
+    font-family: Pacifico, sans-serif;
+    font-weight: normal;
+    font-size: 32px;
+    margin: 0 0 0 15px;
+    
+    /*transitions*/
+    -webkit-transition: all 0.2s ease-in-out; /* Chrome/Safari */
+    -moz-transition: all 0.2s ease-in-out; /* Firefox */
+    -ms-transition: all 0.2s ease-in-out; /* IE */
+    -o-transition: all 0.2s ease-in-out; /* Opera */
+    transition: all 0.2s ease-in-out
+}
+
+
+/*header title - shrunken mode*/
+#header.shrink #headerTitle {
+    font-size: 24px
+}
+
+
+
+/******************************************************************************/
+/* CONTENT */
+/******************************************************************************/
+
+/*content wrapper*/
+#content {
+    margin-top: 100px; /*header initial size*/
+    margin-bottom: 20px; /*header initial size*/
+}
+
+
+
+/******************************************************************************/
+/* FOOTER */
+/******************************************************************************/
+
+/*footer wrapper*/
+#footer {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #6c3099;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    z-index: 10;
+    font-family: Cuprum, sans-serif;
+    font-weight: normal;
+    font-size: 0;
+}
+
+
+/*footer content container*/ 
+#footer #footerContainer {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 22px 10px 19px 10px; /*padding-bottom at 19px not 22px to correct a visual bug with the */
+    padding-bottom: 19px 
+}
+
+
+/*footer contacts column*/ 
+#footer #contactsSection {
+    width: 33.3333333%;
+    text-align: left;
+    color: #ffffff;
+    font-size: 15px
+}
+
+
+/*footer contacts list*/ 
+#footer #contactsSection ul {
+    list-style: none; /*to replace with the FA icons*/
+    margin-left: -5px;
+    margin-top: 5px;
+    margin-bottom: 5px
+}
+
+
+/*footer contacts list item*/ 
+#footer #contactsSection li {
+    padding-top: 4px;
+    padding-bottom: 4px
+}
+
+
+/*footer contacts list items pseudo-bullet (icon) - shared properties*/ 
+#footer #contactsSection .address::before, 
+#footer #contactsSection .phone::before, 
+#footer #contactsSection .email::before {
+    font-family: FontAwesome;
+    float: left;
+    color: #ffffff;
+    font-size: 16px;
+    line-height: 18px;
+    margin-left: -33px
+}
+
+
+/*footer contacts address icon*/
+#footer #contactsSection .address::before {
+    content: '\f1ad'
+}
+
+
+/*footer contacts phone icon*/
+#footer #contactsSection .phone::before {
+    content: '\f095'
+}
+
+
+/*footer contacts email icon*/
+#footer #contactsSection .email::before {
+    content: '\f0e0'
+}
+
+
+/*footer social buttons column*/ 
+#footer #socialSection {
+    display: inline-block;
+    width: 33.3333333%;
+    text-align: center
+}
+
+
+/*footer social button*/ 
+#footer #socialSection .socialBtn {
+    width: 29px;
+    height: 29px;
+    background-color: #ffffff;
+    border: none;
+    text-align: center;
+    color: #6c3099;
+    font-size: 17px;
+    margin: 3px;
+    cursor: pointer;
+    line-height: 30px;
+    
+    /*transitions*/
+    -webkit-transition: all 0.2s ease-in-out; /* Chrome/Safari */
+    -moz-transition: all 0.2s ease-in-out; /* Firefox */
+    -ms-transition: all 0.2s ease-in-out; /* IE */
+    -o-transition: all 0.2s ease-in-out; /* Opera */
+    transition: all 0.2s ease-in-out
+}
+
+
+/*footer social button (on hover)*/ 
+#footer #socialSection .socialBtn:hover {
+    background-color: #f04b38;
+    color: #ffffff
+}
+
+
+/*footer social button (on focus) - remove the native outline only*/ 
+#footer #socialSection .socialBtn:focus {
+    outline: 0
+}
+
+
+/*footer logo column*/ 
+#footer #logoSection {
+    display: inline-block;
+    width: 33.3333333%;
+    text-align: right
+}
+
+
+/*footer logo image*/ 
+#footer #footerLogo {
+    height: 90px;
+    width: auto;    
+    
+    /*grayscale filter to the logo*/
+    -webkit-filter: grayscale(100%) brightness(250%); /* Chrome/Safari */
+    -moz-filter: grayscale(100%) brightness(250%); /* Firefox */
+    -ms-filter: grayscale(100%) brightness(250%); /* IE */
+    -o-filter: grayscale(100%) brightness(250%); /* Opera */
+    filter: grayscale(100%) brightness(250%);
+}
+
+
+/*footer links/anchors*/ 
+#footer a {
+    color: #ffffff
+}
+
+
+/*footer links/anchors (ON HOVER)*/ 
+#footer a:hover {
+    color: #f04b38
+}
+
+
+/*******************************************************************************
+/* VIEWPORTS */
+/******************************************************************************/
+
+/*extra-small and small viewport (combined)*/
+@media screen and (max-width: 767px) {
+    
+    /***************************************************************************
+    /* HEADER */
+    /**************************************************************************/
+    
+    /*header wrapper*/
+    #header {
+        position: relative;
+        top: 0;
+        left: 0;
+        right: 0
+    }
+
+    
+    /*header content container*/ 
+    #header #headerContainer{
+        display: block;
+        text-align: center;
+    }
+
+    
+    /*header logo*/
+    #header #headerLogo {
+        width: auto;
+        height: 120px
+    }
+    
+    
+    /*header logo - shrunken mode*/
+    #header.shrink #headerLogo {
+        height: 120px
+    }
+
+    
+    /*header title*/
+    #header #headerTitle {
+        margin: 0 0 15px 0
+    }
+    
+    
+    /*header title - shrunken mode*/
+    #header.shrink #headerTitle {
+        font-size: 32px
+    }
+    
+    
+    
+    /***************************************************************************
+    /* FOOTER */
+    /**************************************************************************/
+    
+    /*footer contacts column (full width)*/
+    #footer #contactsSection {
+        width: 100%;
+    }
+    
+    
+    /*footer social column (half-screen width)*/
+    #footer #socialSection {
+        width: 50%;
+        text-align: left
+    }
+    
+    
+    /*footer logo column (half-screen width)*/
+    #footer #logoSection {
+        width: 50%;
+        text-align: right
+    }
+    
+    
+    /*footer logo itself*/
+    #footer #footerLogo {
+        height: 55px;
+        width: auto;
+    }
+}
+
+
+
+/*******************************************************************************
+/* ANIMATIONS KEYFRAMES */
+/******************************************************************************/
+
+/*header background-color animation on shirnking*/
+@keyframes shrinkAnimation {
+    0% {
+        background-color: #eeeeee; /*light gray (default)*/
+    }
+    50% {
+        background-color: #bbbbbb; /*darker gray*/
+    }
+    100% {
+        background-color: #eeeeee; /*light gray (default)*/
+    }
+}

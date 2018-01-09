@@ -1,0 +1,47 @@
+<div id="{{outerDivId}}" class="{{outerDivClass}}">
+    <div class="itemBox">
+        <!--image container and image-->
+        <div class="itemImgContainer">
+            <div class="itemImg" style="background-image: url('{{imgSource}}')"></div>
+        </div>
+        
+        <!--content container-->
+        <div class="itemContentContainer">
+            <!--item title and description-->
+            <div class="itemTextContainer">
+                <h3 class="itemTitle">{{title}}</h3>
+                <span class="itemDescription">{{description}}</span>
+            </div>
+            
+            <!--item prices-->
+            <div class="itemPricesContainer">
+                <!--one pax-->
+                <div class="itemPriceWrapper" style="{{onePaxPriceStyle}}">
+                    <div class="itemOnePaxPrice itemPrice">
+                        <i class="icon-user"></i>
+                        <div>{{onePaxPrice}}</div>
+                    </div>
+                </div>
+                <!--three pax-->
+                <div class="itemPriceWrapper" style="{{threePaxPriceStyle}}">
+                    <div class="itemThreePaxPrice itemPrice">
+                        <i class="icon-user"></i>
+                        <div>{{threePaxPrice}}</div>
+                    </div>
+                </div>
+                <!--more pax-->
+                <div class="itemPriceWrapper" style="{{morePaxPriceStyle}}">
+                    <div class="itemMorePaxPrice itemPrice">
+                        <i class="icon-user"></i>
+                        <div>{{morePaxPrice}}</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!--button-->
+        <button class="itemButton">
+            <span class="itemButtonText">book now</span>
+        </button>
+    </div>
+</div>

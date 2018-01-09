@@ -1,0 +1,629 @@
+/**
+ * Items display widget's styles
+ */
+
+
+/*******************************************************************************
+/* TITLE BAR */
+/******************************************************************************/
+
+/*title bar container*/
+.itemsTitleBar {
+    display: flex;
+    align-items: center;
+    padding: 30px 10px 20px 10px;
+    overflow: hidden
+}
+
+
+/*title bar button to switch mode*/
+.itemsTitleBar .itemsModeSwitchBtn {
+    display: inline-block;
+    width: 28px;
+    min-width: 28px;
+    height: 28px;
+    min-height: 28px;
+    font-family: FontAwesome;
+    font-size: 13px;
+    text-align: center;
+    background-color: #eeeeee;
+    border-color: #aaaaaa;
+    border-width: 1px;
+    border-style: solid;
+    padding: 0;
+    margin-right: 15px;
+    margin-left: -43px; /*-28 width, -15 margin-right (to make the left-to-right animation when hovered)*/
+    
+    /*transitions*/
+    -webkit-transition: all 0.2s ease-in-out; /* Chrome/Safari */
+    -moz-transition: all 0.2s ease-in-out; /* Firefox */
+    -ms-transition: all 0.2s ease-in-out; /* IE */
+    -o-transition: all 0.2s ease-in-out; /* Opera */
+    transition: all 0.2s ease-in-out; 
+}
+
+
+/*title bar button to switch mode (ON HOVER)*/
+.itemsTitleBar .itemsModeSwitchBtn:hover {
+    background-color: #aaaaaa;
+    color: #ffffff
+}
+
+
+/*title bar button to switch mode (ON FOCUS) - just to remove the outline*/
+.itemsTitleBar .itemsModeSwitchBtn:focus {
+    outline: 0;
+}
+
+
+/*title bar separator line*/
+.itemsTitleBar .itemsTitleSeparator {
+    display: inline-block;
+    width: 100%;
+    border-top-style: solid;
+    border-top-width: 1px;
+    border-top-color: #f04b38
+}
+
+
+/*title bar text (title itself)*/
+.itemsTitleBar .itemsTitle {
+    display: inline-block;
+    font-family: Pacifico, sans-serif;
+    font-weight: bold;
+    font-size: 32px;
+    color: #f04b38;
+    margin: 0 0 0 15px
+}
+
+
+
+/*******************************************************************************
+/* ITEM BOXES 
+/* Global styles item box styles shared by the grid and list modes and not 
+/* overrided by the true list mode styles in xs, s and m viewports
+/******************************************************************************/
+
+/*item box (outer container) - grid and list mode common properties*/
+.itemGridMode,
+.itemListMode {
+    display: inline-block;
+    font-family: Cuprum, sans-serif;
+    background-color: transparent;
+    padding: 10px;
+}
+
+
+/*item box inner container (box itself)*/
+.itemGridMode .itemBox,
+.itemListMode .itemBox {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+        
+    /*transitions*/
+    -webkit-transition: all 0.1s linear 0.05s;  /* Chrome/Safari */
+    -moz-transition: all 0.1s linear 0.05s;  /* Firefox */ 
+    -ms-transition: all 0.1s linear 0.05s;  /* IE */ 
+    -o-transition: all 0.1s linear 0.05s;  /* Opera */
+    transition: all 0.1s linear 0.05s;
+}
+
+
+/*item box inner container (box itself ON HOVER)*/
+.itemGridMode .itemBox:hover,
+.itemListMode .itemBox:hover {
+    box-shadow: 0 0 10px rgba(0,0,0,0.3)
+}
+
+
+/*item box image container*/
+.itemBox .itemImgContainer {
+    display: inline-block;
+    position: relative;
+    float: left;
+    width: 100%;
+    height: 240px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+
+
+/*image overlay (hidden - just to show when the box is hovered)*/
+.itemBox .itemImgContainer::before {
+    font-family: FontAwesome;
+    content: "\f00e"; /*magnifying glass icon*/
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(0,0,0,0.5);
+    opacity: 0;
+    color: #ffffff;
+    font-size: 77px;
+    z-index: 1;
+    
+    /*transitions*/
+    -webkit-transition: all 0.3s ease-in-out; /* Chrome/Safari */
+    -moz-transition: all 0.3s ease-in-out; /* Firefox */
+    -ms-transition: all 0.3s ease-in-out; /* IE */
+    -o-transition: all 0.3s ease-in-out; /* Opera */
+    transition: all 0.3s ease-in-out
+}
+
+
+/*image overlay (when the box is HOVERED) - show it*/
+.itemBox:hover .itemImgContainer::before {
+    opacity: 1;
+}
+
+
+/*image container white arrow - normal size*/
+.itemBox .itemImgContainer::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%; /*horizontal centering*/
+    transform: translateX(-50%); /*horizontal centering*/
+    border-color: transparent transparent #ffffff transparent;
+    border-style: solid;
+    border-width: 14px;
+    z-index: 2;
+    
+    /*transitions*/
+    -webkit-transition: border-width 0.3s ease-in-out; /* Chrome/Safari */
+    -moz-transition: border-width 0.3s ease-in-out; /* Firefox */
+    -ms-transition: border-width 0.3s ease-in-out; /* IE */
+    -o-transition: border-width 0.3s ease-in-out; /* Opera */
+    transition: border-width 0.3s ease-in-out
+}
+
+
+/*image container white arrow (when the box is HOVERED)*/
+.itemBox:hover .itemImgContainer::after {
+    border-width: 22px
+}
+
+
+/*item box image*/
+.itemBox .itemImg {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: 50% 50%;
+    
+    /*transitions*/
+    -webkit-transition: all 0.3s ease-in-out; /* Chrome/Safari */
+    -moz-transition: all 0.3s ease-in-out; /* Firefox */
+    -ms-transition: all 0.3s ease-in-out; /* IE */
+    -o-transition: all 0.3s ease-in-out; /* Opera */
+    transition: all 0.3s ease-in-out
+}
+
+
+/*item box image (when the box is HOVERED - scale and rotate the image and show the overlay)*/
+.itemBox:hover .itemImg {
+    transform: rotate(-7deg) scale(1.3,1.3)
+}
+
+
+/*item box content container*/
+.itemBox .itemContentContainer {
+    display: inline-block;
+    width: 100%;
+    padding: 10px
+}
+
+
+/*item box text container*/
+.itemBox .itemTextContainer {
+    display: inline-block;
+    min-height: 150px;
+    width: 100%;
+}
+
+
+/*item box title*/
+.itemBox .itemTitle {
+    display: block;
+    text-align: center;
+    font-family: Pacifico, sans-serif;
+    font-weight: bold;
+    font-size: 24px;
+    color: #492b87;
+    padding: 13px 0 17px 0
+}
+
+
+/*item box title (when the box is HOVERED)*/
+.itemBox:hover .itemTitle {
+    color: #8f3daa
+}
+
+
+/*item box description*/
+.itemBox .itemDescription {
+    display: block;
+    font-size: 15px;
+    line-height: 21px;
+    height: 84px; /*15 x ((21x100)/15) x 4 - font-size x line-height ratio to font-size x no. lines*/
+    overflow: hidden;
+    text-overflow: ellipsis
+}
+
+
+/*item box container for the price boxes*/
+.itemBox .itemPricesContainer {
+    display: inline-flex;
+    justify-content: center; /*center items */
+    text-align: center;
+    width: 100%;
+    opacity: 0;
+    
+    /*transitions*/
+    -webkit-transition: all 0.1s ease-in-out; /* Chrome/Safari */
+    -moz-transition: all 0.1s ease-in-out; /* Firefox */
+    -ms-transition: all 0.1s ease-in-out; /* IE */
+    -o-transition: all 0.1s ease-in-out; /* Opera */
+    transition: all 0.1s ease-in-out
+}
+
+
+/*item box container for the price boxes (when the box is HOVERED)*/
+.itemBox:hover .itemPricesContainer {
+    opacity: 1
+}
+
+
+/*prices container wrapper for the price box - for spance division purposes*/
+.itemBox .itemPriceWrapper {
+    width: 100% /*force the "column" space to be divided evenly*/
+}
+
+
+/*prices container item price box*/
+.itemBox .itemPrice {
+    display: inline-flex;
+    height: 22px;
+    margin: 5px 3px 10px 3px;
+    font-size: 14px
+}
+
+
+/*price box icon's container*/
+.itemBox .itemPrice > i {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 21px;
+    height: 100%;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #eeeeee;
+    background-color: #eeeeee
+}
+
+
+/*item price icon (common properties)*/
+.itemBox .itemPrice > i::before {
+    font-family: FontAwesome;
+    font-style: normal
+}
+
+
+/*one pax price icon*/
+.itemBox .itemPrice.itemOnePaxPrice > i::before {
+    content: '\f007';
+}
+
+
+/*three pax price icon*/
+.itemBox .itemPrice.itemThreePaxPrice > i::before {
+    content: '\f0c0';
+}
+
+
+/*more pax price icon*/
+.itemBox .itemPrice.itemMorePaxPrice > i::before {
+    content: '\f234';
+}
+
+
+/*item price box's text (amount)*/
+.itemBox .itemPrice > div {
+    display: inline-flex;
+    align-items: center;
+    height: 100%;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #eeeeee;
+    padding: 0 4px 0 4px
+}
+
+
+/*item box button*/
+.itemBox .itemButton {
+    width: 100%;
+    height: 47px;
+    position: relative;
+    background-color: #f04b38;
+    border: none;
+    font-size: 26px;
+    line-height: 1;
+    color: #58211b;
+    overflow: hidden;
+    opacity: 0;
+    
+    /*transitions*/
+    -webkit-transition: all 0.15s ease-out; /* Chrome/Safari */
+    -moz-transition: all 0.15s ease-out; /* Firefox */
+    -ms-transition: all 0.15s ease-out; /* IE */
+    -o-transition: all 0.15s ease-out; /* Opera */
+    transition: all 0.15s ease-out;
+    
+    /*the all property avove is replaced by the ones bellow (shorter declaration)*/
+    -webkit-transition-property: opacity, height, color;
+    -moz-transition-property: opacity, height, color;
+    -ms-transition-property: opacity, height, color;
+    -o-transition-property: opacity, height, color;
+    transition-property: opacity, height, color
+}
+
+
+/*item box button (ON HOVER)*/
+.itemBox .itemButton:hover {
+    cursor: pointer
+}
+
+
+/*item box button (ON FOCUS) - just to remove the native outline*/
+.itemBox .itemButton:focus {
+    outline: 0
+}
+
+
+/*button overlay (hidden - just to show when the button is hovered)*/
+.itemBox .itemButton::after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: -100%;
+    bottom: 0;
+    background-color: #d64231;
+    z-index: 1;
+    
+    /*transitions*/
+    -webkit-transition: all 0.2s ease-in-out; /* Chrome/Safari */
+    -moz-transition: all 0.2s ease-in-out; /* Firefox */
+    -ms-transition: all 0.2s ease-in-out; /* IE */
+    -o-transition: all 0.2s ease-in-out; /* Opera */
+    transition: all 0.2s ease-in-out
+}
+
+
+/*button overlay (when the button is HOVERED) - show it*/
+.itemBox .itemButton:hover::after {
+    left: 0
+}
+
+
+/*button text*/
+.itemBox .itemButton .itemButtonText {
+    position: relative;
+    font-family: Cuprum, sans-serif;
+    z-index: 2
+}
+
+
+/*button text (when the button is HOVERED)*/
+.itemBox .itemButton:hover .itemButtonText {
+    color: #ffffff
+}
+
+
+/*button (when the box is HOVERED) - show the button */
+.itemBox:hover .itemButton {
+    opacity: 1
+}
+
+
+
+/*******************************************************************************
+/* VIEWPORTS */
+/******************************************************************************/
+
+/*extra small (xs) viewport*/
+@media screen and (max-width: 479px) {
+    /*item box outer container column size*/
+    .itemGridMode,
+    .itemListMode {
+        width: 100% /*1 column - both display modes showing as grid mode*/
+    }
+}
+
+
+/*small (s) viewport*/
+@media screen and (max-width: 767px) and (min-width: 480px) {
+    /*item box outer container column size*/
+    .itemGridMode,
+    .itemListMode {
+        width: 50% /*2 columns - both display modes showing as grid mode*/
+    }
+}
+
+
+/*medium (m) viewport*/
+@media screen and (max-width: 1023px) and (min-width: 768px) {
+    /*item box outer container column size*/
+    .itemGridMode,
+    .itemListMode {
+        width: 33.333333333333% /*3 columns - both display modes showing as grid mode*/
+    }
+}
+
+
+/*large (l )and extra-large (xl) viewports (combined)*/
+@media screen and (min-width: 1024px) {
+    
+    /*******************************************************************************
+    /* TITLE BAR */
+    /******************************************************************************/
+    
+    /*hide the change mode button*/
+    .itemsTitleBar:hover .itemsModeSwitchBtn {
+        display: inline-block;
+        margin-left: 0;
+    }
+    
+    
+    
+    /*******************************************************************************
+    /* ITEM BOXES - TRUE LIST-MODE STYLES
+    /* Only applied on l and xl sizes to show the items with the list mode class 
+    /* really in list mode and not in grid mode, as in smaller viewports, overring 
+    /* the grid mode global standards where applyable
+    /******************************************************************************/
+    
+    /*item box's outer container in LIST MODE*/
+    .itemListMode {
+        height: 125px !important;
+        width: 100%
+    }
+    
+    
+    /*item box inner container in LIST MODE (box itself)*/
+    .itemListMode .itemBox {
+        display: flex;
+        align-items: center;
+        justify-content: center
+    }
+    
+    
+    /*item box image container in LIST MODE*/
+    .itemListMode .itemBox .itemImgContainer {
+        width: 215px;
+        height: 100%
+    }
+ 
+    
+    /*image overlay (hidden - just to show when the box is hovered) - LIST MODE*/
+    .itemListMode .itemBox .itemImgContainer::before {
+        font-size: 60px /*smaller icon size*/
+    }
+    
+    
+    /*image container white arrow - normal size - LIST MODE*/
+    .itemListMode .itemBox .itemImgContainer::after {
+        right: 0; /*right aligning*/
+        left: auto; 
+        bottom: 50%; /*vertical centering*/
+        transform: translateX(0) translateY(50%); /*vertical centering*/
+        border-color: transparent #ffffff transparent transparent /*arrow from the right side*/
+    }
+    
+    
+    /*item box content container - LIST MODE*/
+    .itemListMode .itemBox .itemContentContainer {
+        display: inline-block;
+        float: left;
+        width: calc(100% - 415px); /*total - image - button*/
+        height: 100%
+    }
+    
+    
+    /*item box content container - LIST MODE*/
+    .itemListMode .itemBox .itemTextContainer {
+        min-height: auto;
+        margin-top: 2px;
+        margin-bottom: 5px
+    }
+    
+    
+    /*item box title - LIST MODE*/
+    .itemListMode .itemBox .itemTitle {
+        text-align: left;
+        padding: 2px 0 6px 0
+    }
+    
+    
+    /*item box description - LIST MODE*/
+    .itemListMode .itemBox .itemDescription {
+        height: auto;
+        font-size: 14px;
+        line-height: 15px;
+        white-space: nowrap /*allow only one line of text*/
+    }
+    
+    
+    /*prices container content alignment LIST MODE*/
+    .itemListMode .itemBox .itemPricesContainer {
+        justify-content: flex-start; /*align-left the items*/
+        opacity: 1;
+        text-align: left
+    }
+    
+
+    /*prices container wrapper for the price box - for spance division purposes _ LIST MODE*/
+    .itemListMode .itemBox .itemPriceWrapper {
+        width: auto /*wrappers can use the default width and get closer*/
+    }
+    
+    
+    /*prices container item price box - LIST MODE*/
+    .itemListMode .itemBox .itemPrice {
+        height: 20px;
+        font-size: 13px;
+        margin: 5px 10px 0 0 /*remove thge margin left to align-left the boxes*/
+    }
+    
+    
+    /*price icon container - LIST MODE*/
+    .itemListMode .itemPricesContainer .itemPrice > i {
+        width: 25px
+    }
+    
+    
+    /*item box button - LIST MODE*/
+    .itemListMode .itemBox .itemButton {
+        float: right;
+        display: inline-block;
+        width: 200px;
+        height: 47px;
+        opacity: 1
+    }
+    
+    
+    /*item box button (ON HOVER) - LIST MODE*/
+    .itemListMode .itemBox:hover .itemButton {
+        height: 100%
+    }
+}
+
+
+/*(only) large (l) viewport */
+@media screen and (max-width: 1259px) and (min-width: 1024px) {
+    /*item box outer container column size (grid mode only)*/
+    .itemGridMode {
+        width: 25% /*4 columns - list mode showing as rows (separate style)*/
+    }
+}
+
+
+/*(only) extra-large (xl) viewport*/
+@media screen and (min-width: 1260px) {
+    /*item box outer container column size (grid mode only)*/
+    .itemGridMode {
+        width: 20% /*5 columns - list mode showing as rows (separate style)*/
+    }
+}

@@ -1,0 +1,222 @@
+[
+    {
+        "id": "1",
+        "title": "Monte Gordo",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        "onePaxPrice": "15€",
+        "threePaxPrice": "12€",
+        "morePaxPrice": "10€",
+        "tag": "Algarve",
+        "featured": "1",
+        "image": "images/trips/monte_gordo_1024w.jpg"
+    },
+    { 
+        "id": "2",
+        "title": "Albufeira",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut congue nisi malesuada justo blandit posuere.",
+        "onePaxPrice": "18€",
+        "threePaxPrice": "15€",
+        "morePaxPrice": "8€",
+        "tag": "Algarve",
+        "featured": "1",
+        "image": "images/trips/albufeira_1024w.jpg"
+    },
+    { 
+        "id": "3",
+        "title": "Sagres",
+        "description": "Lorem ipsum.",
+        "onePaxPrice": "12€",
+        "threePaxPrice": "10€",
+        "morePaxPrice": "",
+        "tag": "Algarve",
+        "featured": "1",
+        "image": "images/trips/sagres_1024w.jpg"
+    },
+    {
+        "id": "4",
+        "title": "Monte Gordo",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        "onePaxPrice": "15€",
+        "threePaxPrice": "12€",
+        "morePaxPrice": "10€",
+        "tag": "Algarve",
+        "featured": "0",
+        "image": "images/trips/monte_gordo_1024w.jpg"
+    },
+    { 
+        "id": "5",
+        "title": "Albufeira",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut congue nisi malesuada justo blandit posuere.",
+        "onePaxPrice": "18€",
+        "threePaxPrice": "15€",
+        "morePaxPrice": "8€",
+        "tag": "Algarve",
+        "featured": "0",
+        "image": "images/trips/albufeira_1024w.jpg"
+    },
+    { 
+        "id": "6",
+        "title": "Sagres",
+        "description": "Lorem ipsum.",
+        "onePaxPrice": "12€",
+        "threePaxPrice": "10€",
+        "morePaxPrice": "",
+        "tag": "Algarve",
+        "featured": "0",
+        "image": "images/trips/sagres_1024w.jpg"
+    },
+    {
+        "id": "7",
+        "title": "Monte Gordo",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        "onePaxPrice": "15€",
+        "threePaxPrice": "12€",
+        "morePaxPrice": "10€",
+        "tag": "Algarve",
+        "featured": "0",
+        "image": "images/trips/monte_gordo_1024w.jpg"
+    },
+    { 
+        "id": "8",
+        "title": "Albufeira",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut congue nisi malesuada justo blandit posuere.",
+        "onePaxPrice": "18€",
+        "threePaxPrice": "15€",
+        "morePaxPrice": "8€",
+        "tag": "Algarve",
+        "featured": "0",
+        "image": "images/trips/albufeira_1024w.jpg"
+    },
+    { 
+        "id": "9",
+        "title": "Sagres",
+        "description": "Lorem ipsum.",
+        "onePaxPrice": "12€",
+        "threePaxPrice": "10€",
+        "morePaxPrice": "",
+        "tag": "Algarve",
+        "featured": "0",
+        "image": "images/trips/sagres_1024w.jpg"
+    },
+    {
+        "id": "10",
+        "title": "Monte Gordo",
+        "description": "Dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.",
+        "onePaxPrice": "15€",
+        "threePaxPrice": "12€",
+        "morePaxPrice": "10€",
+        "tag": "Algarve",
+        "featured": "0",
+        "image": "images/trips/monte_gordo_1024w.jpg"
+    },
+    {
+        "id": "11",
+        "title": "Odeceixe",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        "onePaxPrice": "15€",
+        "threePaxPrice": "12€",
+        "morePaxPrice": "10€",
+        "tag": "Alentejo",
+        "featured": "1",
+        "image": "images/trips/odeceixe_1024w.jpg"
+    },
+    { 
+        "id": "12",
+        "title": "Porto Covo",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut congue nisi malesuada justo blandit posuere.",
+        "onePaxPrice": "18€",
+        "threePaxPrice": "15€",
+        "morePaxPrice": "8€",
+        "tag": "Alentejo",
+        "featured": "1",
+        "image": "images/trips/porto_covo_1024w.jpg"
+    },
+    { 
+        "id": "13",
+        "title": "Sines",
+        "description": "Lorem ipsum.",
+        "onePaxPrice": "12€",
+        "threePaxPrice": "10€",
+        "morePaxPrice": "",
+        "tag": "Alentejo",
+        "featured": "0",
+        "image": "images/trips/sines_1024w.jpg"
+    },
+    {
+        "id": "14",
+        "title": "Odeceixe",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        "onePaxPrice": "15€",
+        "threePaxPrice": "12€",
+        "morePaxPrice": "10€",
+        "tag": "Alentejo",
+        "featured": "0",
+        "image": "images/trips/odeceixe_1024w.jpg"
+    },
+    { 
+        "id": "15",
+        "title": "Porto Covo",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut congue nisi malesuada justo blandit posuere.",
+        "onePaxPrice": "18€",
+        "threePaxPrice": "15€",
+        "morePaxPrice": "8€",
+        "tag": "Alentejo",
+        "featured": "0",
+        "image": "images/trips/porto_covo_1024w.jpg"
+    },
+    { 
+        "id": "16",
+        "title": "Sines",
+        "description": "Lorem ipsum.",
+        "onePaxPrice": "12€",
+        "threePaxPrice": "10€",
+        "morePaxPrice": "",
+        "tag": "Alentejo",
+        "featured": "0",
+        "image": "images/trips/sines_1024w.jpg"
+    },
+    {
+        "id": "17",
+        "title": "Odeceixe",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        "onePaxPrice": "15€",
+        "threePaxPrice": "12€",
+        "morePaxPrice": "10€",
+        "tag": "Alentejo",
+        "featured": "0",
+        "image": "images/trips/odeceixe_1024w.jpg"
+    },
+    { 
+        "id": "18",
+        "title": "Porto Covo",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut congue nisi malesuada justo blandit posuere.",
+        "onePaxPrice": "18€",
+        "threePaxPrice": "15€",
+        "morePaxPrice": "8€",
+        "tag": "Alentejo",
+        "featured": "0",
+        "image": "images/trips/porto_covo_1024w.jpg"
+    },
+    { 
+        "id": "19",
+        "title": "Sines",
+        "description": "Lorem ipsum.",
+        "onePaxPrice": "12€",
+        "threePaxPrice": "10€",
+        "morePaxPrice": "",
+        "tag": "Alentejo",
+        "featured": "0",
+        "image": "images/trips/sines_1024w.jpg"
+    },
+    {
+        "id": "20",
+        "title": "Odeceixe",
+        "description": "Dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.",
+        "onePaxPrice": "15€",
+        "threePaxPrice": "12€",
+        "morePaxPrice": "10€",
+        "tag": "Alentejo",
+        "featured": "0",
+        "image": "images/trips/odeceixe_1024w.jpg"
+    }
+]
